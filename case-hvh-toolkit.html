@@ -65,7 +65,7 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     <p>With no original project files, I rebuilt the entire Human vs Hamster graphics package in After Effects from scratch and structured it as a <strong>two-tier template toolkit</strong>: a set of master graphic rigs exposed through the Essential Graphics panel, wrapped by a library of ready-to-use template comps an editor drops straight onto the timeline.</p>
     <p>The key design decision: the toolkit is <strong>automation-ready but not automation-dependent</strong>. Every editable field is a named text layer, so an editor can either type translations in by hand through the Essential Graphics panel, or let the studio's batch script populate every field automatically from a translation list. Same rigs, two ways in — which means the package is fast for a power user and still safe for anyone picking it up cold.</p>
     <figure>
-      <img src="img/egp-colour-controls.png" alt="After Effects with the Essential Graphics panel, project tree and rendered Espèce Suprême board">
+      <img src="egp-colour-controls.png" alt="After Effects with the Essential Graphics panel, project tree and rendered Espèce Suprême board">
       <figcaption>The toolkit in use — exposed controls in the Essential Graphics panel (left of centre), the rig library in the project tree, and the rendered board. One rig, editor-safe inputs.</figcaption>
     </figure>
     <div class="todo">If you can, also screen-record 15s of dropping a template in and typing French copy — motion sells this even harder. Clear with Woody first.</div>
@@ -75,15 +75,15 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     <h2>Rebuilt to match — frame for frame</h2>
     <p>The test of a from-scratch rebuild is simple: cut it against the English original and see if anyone can tell. Every graphic below was reconstructed with no project files — matching the typography, colour, lighting and timing from the broadcast master alone, then localised into French.</p>
     <figure class="compare">
-      <img src="img/compare-level-name.png" alt="Side by side: French MISE À FEU level card versus the English BLAST OFF original, same frame">
+      <img src="compare-level-name.png" alt="Side by side: French MISE À FEU level card versus the English BLAST OFF original, same frame">
       <figcaption>Level card — my French rebuild (left) against the English master (right). Same badge construction, lighting and placement.</figcaption>
     </figure>
     <figure class="compare">
-      <img src="img/compare-board.png" alt="Side by side: French contestant board versus the English original">
+      <img src="compare-board.png" alt="Side by side: French contestant board versus the English original">
       <figcaption>Contestant board — ten lit 3D name plates, rebuilt and localised, matched against the original.</figcaption>
     </figure>
     <figure class="compare">
-      <img src="img/compare-mascot.png" alt="Side by side: French Astro mascot lower third versus the English original">
+      <img src="compare-mascot.png" alt="Side by side: French Astro mascot lower third versus the English original">
       <figcaption>Mascot lower third — badge, flag logo and 3D character composite, reconstructed to match.</figcaption>
     </figure>
     <div class="todo">These pair your rebuild (left) with the English master (right). Double-check you're cleared to show the English originals publicly — if not, show your rebuild frames alone and describe the match in text.</div>
@@ -101,7 +101,7 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     </div>
     <p class="mono meta" style="margin-bottom:0">Six exposed rigs in total — the L3D name-strap exists as a family (1-line, 2-line, and a blue team variant) sharing one design language.</p>
     <figure>
-      <img src="img/project-structure.png" alt="After Effects project panel showing the Templates and ESP rig folder structure">
+      <img src="project-structure.png" alt="After Effects project panel showing the Templates and ESP rig folder structure">
       <figcaption>The library an editor works from — Templates grouped by type (Cards, Dubcard, Thirds, Title, Vis), each wrapping one of the ESP rigs in Pre-comps. Real project structure.</figcaption>
     </figure>
     <div class="todo">Before screenshotting the EGP panel for the live site: give the rigs proper MoGRT names (several read "Untitled") and label every exposed control — unnamed controls undercut a toolkit case study.</div>
@@ -113,11 +113,11 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     <p>Crucially, the rigs still work entirely by hand. If the automation isn't run — or an editor just wants to tweak one card — they type straight into the Essential Graphics panel. I designed the toolkit so the automation is an accelerator, never a dependency.</p>
     <div class="fig-grid">
       <figure>
-        <img src="img/generated-comps.png" alt="Project panel showing a full season and episode folder of automatically generated graphics comps">
+        <img src="generated-comps.png" alt="Project panel showing a full season and episode folder of automatically generated graphics comps">
         <figcaption>Output of one automated pass — a full episode of populated comps, numbered in timeline order, generated from the translation list.</figcaption>
       </figure>
       <figure>
-        <img src="img/master-timeline.png" alt="Master timeline with many named template layers laid over the programme footage">
+        <img src="master-timeline.png" alt="Master timeline with many named template layers laid over the programme footage">
         <figcaption>The same comps placed on the master timeline — every graphic in the episode, each one a template wrapping a shared rig.</figcaption>
       </figure>
     </div>
@@ -133,7 +133,7 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     <h2>One rig, many looks — the colour system</h2>
     <p>The two richest rigs don't hard-code their colours. <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> run stacked colour-menu controls (Colour 1, 2, 3 — sometimes 4) feeding Fill effects, so a single build switches between the show's blue, gold, purple, pink and green states from a dropdown rather than a re-edit. One rig covers what would otherwise be a dozen separate graphics, which is what kept the package fast to version across a full series.</p>
     <figure>
-      <img src="img/hamster-board.png" alt="Ten contestant name boards in different colourways, all driven by the same rig">
+      <img src="hamster-board.png" alt="Ten contestant name boards in different colourways, all driven by the same rig">
       <figcaption>Ten name boards, one rig — each instance is the same ESP_Vis_Board Name graphic with different text and a different colour-menu selection. No re-editing, no duplicate builds.</figcaption>
     </figure>
   </section>
@@ -142,7 +142,7 @@ figure.compare::after{content:"EN — ORIGINAL";position:absolute;top:9px;right:
     <h2>Not flat — lit 3D scenes</h2>
     <p>The "vis" rigs aren't 2D lower thirds. Rebuilt from reference, <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> are composed in 3D space — a camera, multiple ambient lights, a main canvas plane and shaped geometry — so the name boards sit and catch light like the originals. Matching that look without source files meant reconstructing the lighting and camera by eye, then wrapping the result in the same editor-safe controls as everything else.</p>
     <figure>
-      <img src="img/rig-3d-internals.png" alt="Inside an ESP rig: a 3D top-view showing the board angled in space, camera, lights, and the colour-menu effect controls">
+      <img src="rig-3d-internals.png" alt="Inside an ESP rig: a 3D top-view showing the board angled in space, camera, lights, and the colour-menu effect controls">
       <figcaption>Under the hood — the top-view (right) shows the board angled in 3D space with its lights and canvas; the effect controls (left) show the stacked colour menus and Fills that drive every colourway.</figcaption>
     </figure>
   </section>
@@ -161,7 +161,7 @@ function addZero(n){ return (n &lt; 10) ? "0"+n : n; }
 slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
     <p>Expressions wire the rest of the rigs together too: editable text layers feed the visible graphic via <span class="mono">sourceText</span> links, and fade timing is driven straight off the <span class="mono">Frames In</span> control — so the exposed inputs stay simple while the rig does the work underneath.</p>
     <figure>
-      <img src="img/level-name-expressions.png" alt="A level-name comp with expressions linking the editable text layers to the visible graphic and driving the fade from the Frames In control">
+      <img src="level-name-expressions.png" alt="A level-name comp with expressions linking the editable text layers to the visible graphic and driving the fade from the Frames In control">
       <figcaption>Expression wiring on a level-name card — the visible text reads from named layers via sourceText, and opacity fades off the Frames In slider. Edit the input, the rig updates itself.</figcaption>
     </figure>
     <div class="todo">Verify you're happy showing the code verbatim — it's your work, but check nothing in the project is considered proprietary by WBD.</div>
@@ -183,7 +183,7 @@ slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
     <h2>Down to the logo itself</h2>
     <p>With no source artwork, even the show logo had to be rebuilt. Working from a single broadcast screengrab, I reconstructed the <strong>Human vs Hamster</strong> wordmark from scratch as clean vector in Illustrator — every letterform, bevel, outline and colour band redrawn — then localised it to the French <strong>Humain vs Hamster</strong>. That vector became the master logo used across the whole package: bumps, transitions, lower thirds and boards.</p>
     <figure>
-      <img src="img/logo-rebuild-ai.png" alt="The rebuilt Humain vs Hamster logo as editable vector artwork in Illustrator">
+      <img src="logo-rebuild-ai.png" alt="The rebuilt Humain vs Hamster logo as editable vector artwork in Illustrator">
       <figcaption>The French wordmark rebuilt from a screengrab as editable vector — the master logo feeding every graphic in the package.</figcaption>
     </figure>
     <p>A 3D version of the title was also rebuilt in Cinema 4D to match the original's dimensional logo bumps and transitions.</p>
